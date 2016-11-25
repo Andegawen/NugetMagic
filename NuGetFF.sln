@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NuGetFF", "NuGetFF\NuGetFF.csproj", "{A7380AEB-B63B-48F2-8AAB-6759DCF13A5E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Pack", "Pack", "{7AD7F08C-3FAE-4D9D-9835-F5498826D133}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.config = .nuget\NuGet.config
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samwise", "Samwise\Samwise.csproj", "{4AF9F56F-1E00-456F-A8F0-2EB00D4F4C72}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A7380AEB-B63B-48F2-8AAB-6759DCF13A5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7380AEB-B63B-48F2-8AAB-6759DCF13A5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7380AEB-B63B-48F2-8AAB-6759DCF13A5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7380AEB-B63B-48F2-8AAB-6759DCF13A5E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4AF9F56F-1E00-456F-A8F0-2EB00D4F4C72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4AF9F56F-1E00-456F-A8F0-2EB00D4F4C72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4AF9F56F-1E00-456F-A8F0-2EB00D4F4C72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4AF9F56F-1E00-456F-A8F0-2EB00D4F4C72}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
