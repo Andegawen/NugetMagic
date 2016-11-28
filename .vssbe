@@ -70,42 +70,8 @@
   "PreBuild": [
     {
       "Enabled": true,
-      "Name": "Some",
-      "Caption": "MyNugetRestore",
-      "SupportMSBuild": true,
-      "SupportSBEScripts": true,
-      "IgnoreIfBuildFailed": false,
-      "BuildType": "Common",
-      "Confirmation": true,
-      "ToConfiguration": [],
-      "ExecutionOrder": {
-        "$type": "net.r_eg.vsSBE.Events.ExecutionOrder[], vsSolutionBuildEvent",
-        "$values": []
-      },
-      "Process": {
-        "$type": "net.r_eg.vsSBE.Events.EventProcess, vsSolutionBuildEvent",
-        "Waiting": true,
-        "Hidden": true,
-        "TimeLimit": 30
-      },
-      "Mode": {
-        "$type": "net.r_eg.vsSBE.Events.ModeTargets, vsSolutionBuildEvent",
-        "Type": "Targets",
-        "Command": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<Project ToolsVersion=\"4.0\" xmlns=\"http://schemas.microsoft.com/developer/msbuild/2003\">\r\n    <Target Name=\"Init\">\r\n        <Exec Command=\"&quot;E:\\programowanie\\Workspace Forcom\\NuGetFF\\.nuget\\NugetRestore.bat&quot;\"/>\r\n    </Target>\r\n</Project>",
-        "Command__": [
-          "<?xml version=\"1.0\" encoding=\"utf-8\"?>",
-          "<Project ToolsVersion=\"4.0\" xmlns=\"http://schemas.microsoft.com/developer/msbuild/2003\">",
-          "    <Target Name=\"Init\">",
-          "        <Exec Command=\"&quot;E:\\programowanie\\Workspace Forcom\\NuGetFF\\.nuget\\NugetRestore.bat&quot;\"/>",
-          "    </Target>",
-          "</Project>"
-        ]
-      }
-    },
-    {
-      "Enabled": false,
-      "Name": "Act",
-      "Caption": "",
+      "Name": "NugetRestore",
+      "Caption": "Restores all packages defined in config and prepare folder of packages to csprojs",
       "SupportMSBuild": true,
       "SupportSBEScripts": true,
       "IgnoreIfBuildFailed": false,
@@ -123,33 +89,17 @@
         "TimeLimit": 30
       },
       "Mode": {
-        "$type": "net.r_eg.vsSBE.Events.ModeCSharp, vsSolutionBuildEvent",
-        "Type": "CSharp",
-        "References": [
-          "System.dll"
-        ],
-        "SmartReferences": true,
-        "GenerateInMemory": true,
-        "TreatWarningsAsErrors": false,
-        "WarningLevel": 4,
-        "FilesMode": false,
-        "CachingBytecode": false,
-        "LastTime": 0,
-        "Command": "using ICommand = net.r_eg.vsSBE.Actions.ICommand;\r\nusing ISolutionEvent = net.r_eg.vsSBE.Events.ISolutionEvent;\r\n\r\nnamespace vsSolutionBuildEvent\r\n{\r\n    public class CSharpMode\r\n    {\r\n        public static int Init(ICommand cmd, ISolutionEvent evt)\r\n        {\r\n            return 0;\r\n        }\r\n    }\r\n}",
+        "$type": "net.r_eg.vsSBE.Events.ModeTargets, vsSolutionBuildEvent",
+        "Type": "Targets",
+        "Command": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<Project ToolsVersion=\"4.0\" xmlns=\"http://schemas.microsoft.com/developer/msbuild/2003\">\r\n\r\n    <Target Name=\"Init\">\r\n        <Exec Command=\"&quot;$(SolutionDir).nuget\\NugetRestore.bat&quot;\"/>\r\n    </Target>\r\n</Project>",
         "Command__": [
-          "using ICommand = net.r_eg.vsSBE.Actions.ICommand;",
-          "using ISolutionEvent = net.r_eg.vsSBE.Events.ISolutionEvent;",
+          "<?xml version=\"1.0\" encoding=\"utf-8\"?>",
+          "<Project ToolsVersion=\"4.0\" xmlns=\"http://schemas.microsoft.com/developer/msbuild/2003\">",
           "",
-          "namespace vsSolutionBuildEvent",
-          "{",
-          "    public class CSharpMode",
-          "    {",
-          "        public static int Init(ICommand cmd, ISolutionEvent evt)",
-          "        {",
-          "            return 0;",
-          "        }",
-          "    }",
-          "}"
+          "    <Target Name=\"Init\">",
+          "        <Exec Command=\"&quot;$(SolutionDir).nuget\\NugetRestore.bat&quot;\"/>",
+          "    </Target>",
+          "</Project>"
         ]
       }
     }
