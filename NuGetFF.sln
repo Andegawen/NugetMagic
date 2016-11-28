@@ -8,6 +8,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Pack", "Pack", "{7AD7F08C-3FAE-4D9D-9835-F5498826D133}"
 	ProjectSection(SolutionItems) = preProject
 		.nuget\NuGet.config = .nuget\NuGet.config
+		.nuget\packages.config = .nuget\packages.config
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samwise", "Samwise\Samwise.csproj", "{4AF9F56F-1E00-456F-A8F0-2EB00D4F4C72}"
